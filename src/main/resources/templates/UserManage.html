@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="ISO-8859-1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	<!--Fontawesome icons for footer-->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+	<link rel="stylesheet" href="/style/styles.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />            
+	<title>IBolit</title>
+	<!--JQuery component-->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+</head>
+	<body style="background-color: GhostWhite;">
+		
+	<section>
+		<button class="btn btn-warning"><a href="/userCreate.html">Create A New Member</a></button>
+		<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Surname</th>
+      <th scope="col">Country</th>
+      <th scope="col">City</th>
+      <th scope="col">Address</th>
+      <th scope="col">Email</th>
+      <th scope="col">Username</th>
+      <th scope="col">Role</th>
+      <th scope="col">Options</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+		<tr th:each="simpleUser:  ${displayUsers}">
+			<td th:text="${simpleUser.name}"></td>
+			<td th:text="${simpleUser.surname}"></td>
+			<td th:text="${simpleUser.country}"></td>
+			<td th:text="${simpleUser.city}"></td>
+			<td th:text="${simpleUser.address}"></td>
+			<td th:text="${simpleUser.email}"></td>
+			<td th:text="${simpleUser.userName}"></td>
+			<td th:text="${simpleUser.role}"></td>
+			<td><a th:href="@{/UserDelete/} + ${simpleUser.idUser}" class="link-dark"><i class='fa-solid fa-trash'></i></a>
+			<a th:href="@{/UserDelete/} + ${simpleUser.idUser}" class="link-dark"><i class='fa-solid fa-pen-to-square'></i></a>
+<!--<a href=''><i class='fa-solid fa-trash'></i>-->
+</td>
+		</tr>
+     
+    </tr>
+   
+
+	</section>
+
+	</body>
+</html>
