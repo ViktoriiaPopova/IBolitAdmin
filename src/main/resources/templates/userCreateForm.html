@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="ISO-8859-1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<scriptsrc="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	<!--Fontawesome icons for footer-->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+	<link rel="stylesheet" href="/style/styles.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />            
+	<title>IBolit</title>
+	<!--JQuery component-->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+</head>
+	<body style="background-color: GhostWhite;">
+		
+	<section>		
+		<div class="card-body">
+							<form  action="/createNewUser" method="post">
+								<label for="name" class="form-label">Name: </label>
+				                <input type="text" class="form-control" id="name" name="name" placeholder="Insert name" required>
+				                
+				                <label for="surname" class="form-label my-3">Surname: </label>
+				                <input type="text" class="form-control" id="surname" name="surname" placeholder="Insert surname" required>
+				                
+				                <label for="country" class="form-label my-3">Country: </label>
+				                <input type="text" class="form-control" id="country" name="country" placeholder="Insert country" required>
+				                
+				                <label for="city" class="form-label my-3">City: </label>
+				                <input type="text" class="form-control" id="city" name="city" placeholder="Insert city" required>
+				                
+				                <label for="address" class="form-label my-3">Address: </label>
+				                <input type="text" class="form-control" id="address" name="address" placeholder="Insert address" required>
+							
+				                <label for="email" class="form-label my-3">Email: </label>
+				                <input type="email" class="form-control" id="email" name="email" placeholder="Insert email" required>
+				                <div class="invalid-feedback">Your email is wrong.</div>
+				                
+				                <label for="userName" class="form-label my-3">Username: </label>
+				                <input type="text" class="form-control" id="userName" name="userName" placeholder="Insert username" required>
+				                
+				                <label for="password" class="form-label my-3">Password: </label>
+				                <input type="password" class="form-control" id="password" name="password" placeholder="Insert password" required>	
+				                <label for= "role"  class="form-label my-3">Set the role of the member</label>	                
+				                <input type="text" class="form-control" id="role" name="role" placeholder="It can be ONLY admin/user">	
+				                <button type="submit" class="btn btn-success">Add to the system</button>
+				            </form>
+						</div>
+	</section>
+
+	</body>
+</html>

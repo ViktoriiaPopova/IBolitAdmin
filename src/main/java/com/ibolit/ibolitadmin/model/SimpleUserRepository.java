@@ -10,5 +10,9 @@ public interface SimpleUserRepository extends JpaRepository<SimpleUser,Integer>{
 
 	Boolean existsBySurname(String surname);
 
+	Boolean existsByPassword(String password);
+
+	SimpleUser findByEmail(String email);
+
 
 }

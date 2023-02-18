@@ -17,7 +17,7 @@
 	<body style="background-color: GhostWhite;">
 		
 	<section>
-		<button class="btn btn-warning"><a href="/userCreate.html">Create A New Member</a></button>
+		<button class="btn btn-warning"><a href="/userCreateForm">Create A New Member</a></button>
 		<table class="table table-striped">
   <thead>
     <tr>
@@ -44,7 +44,7 @@
 			<td th:text="${simpleUser.userName}"></td>
 			<td th:text="${simpleUser.role}"></td>
 			<td><a th:href="@{/UserDelete/} + ${simpleUser.idUser}" class="link-dark"><i class='fa-solid fa-trash'></i></a>
-			<a th:href="@{/UserDelete/} + ${simpleUser.idUser}" class="link-dark"><i class='fa-solid fa-pen-to-square'></i></a>
+			<a th:href="@{/UserUpdateForm/} + ${simpleUser.idUser}" class="link-dark"><i class='fa-solid fa-pen-to-square'></i></a>
 <!--<a href=''><i class='fa-solid fa-trash'></i>-->
 </td>
 		</tr>
