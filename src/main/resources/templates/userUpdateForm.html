@@ -8,18 +8,17 @@
 	<scriptsrc="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 	<!--Fontawesome icons for footer-->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-	<link rel="stylesheet" href="/style/styles.css">
+	<link rel="stylesheet" href="/style.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />            
 	<title>IBolit</title>
 	<!--JQuery component-->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 </head>
-	<body style="background-color: GhostWhite;">
-		
-	<section>		
+	<body>	
+	<section class="tableSection">		
+		<h2 style="margin-bottom:0%; display:flex; justify-content: center;">Update User</h2>
 		<div class="card-body">
-			<h2>Update user Information</h2>
-							<form  action="/createNewUser" th:object="${SimpleUser}" method="post">
+							<form  action="/createNewUser" th:object="${SimpleUser}" method="post" style="margin-left:20%;margin-right:20%;">
 								<!--hidden field to get an id -->
 								<input type="hidden" th:field ="*{idUser}">
 								
@@ -47,11 +46,17 @@
 				                
 				                <label for="password" class="form-label my-3">Password: </label>
 				                <input type="password" th:field="*{password}" class="form-control" id="password" name="password" placeholder="Insert password" required>	
-				                <label for= "role"  class="form-label my-3">Set the role of the member</label>	                
-				                <input type="text" th:field="*{role}" class="form-control" id="role" name="role" placeholder="It can be ONLY admin/user">	
-				                <button type="submit" class="btn btn-success">Add to the system</button>
+				               <!-- <label for= "role"  class="form-label my-3">Set the role of the member</label>	                
+				                <input type="text" th:field="*{role}" class="form-control" id="role" name="role" placeholder="It can be ONLY admin/user">	-->
+				                <p>Set the role of the member:</p>
+									  <input type="radio"  th:field="*{role}" name="role" value="admin">
+									  <label class="form-label my-3" for="role">admin</label><br>
+									  <input type="radio"  th:field="*{role}" name="role" value="user">
+									  <label class="form-label my-3" for="role">user</label><br>  
+				                
+				                <button type="submit" class="btn btn-success">Update User</button>
+				                <button  class="btn btn-info"><a href="/AdminProfile">Back To Admin Profile</a></button>
 				            </form>
-				            <button  class="btn btn-success"><a href="/AdminProfile">Go back to Admin Profile</a></button>
 						</div>
 	</section>
 

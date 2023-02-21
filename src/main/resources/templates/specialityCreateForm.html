@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="ISO-8859-1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<scriptsrc="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	<!--Fontawesome icons for footer-->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+	<link rel="stylesheet" href="/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />            
+	<title>IBolit</title>
+	<!--JQuery component-->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+</head>
+	<body>
+		
+	<section class="tableSection">		
+		<h2 style="margin-bottom:0%; display:flex; justify-content: center;">Add A New Speciality To The System</h2>
+		<div class="card-body">
+							<form  action="/saveNewSpeciality" method="post" style="margin-left:20%;margin-right:20%;">
+								
+								<label for="name" class="form-label my-3">Speciality: </label>
+				                <input type="text" class="form-control" id="speciality_name" name="speciality_name" placeholder="New speciality" required>
+				                
+				             
+          
+				                <button type="submit" class="btn btn-success">Add To The System</button>
+				                <button  class="btn btn-info"><a href="/AdminProfile">Back To Admin Profile</a></button>
+				            </form>
+		</div>
+	</section>
+
+	</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="ISO-8859-1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<scriptsrc="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	<!--Fontawesome icons for footer-->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+	<link rel="stylesheet" href="/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />            
+	<title>IBolit</title>
+	<!--JQuery component-->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+</head>
+	<body>	
+	<section class="tableSection">		
+		<h2 style="margin-bottom:0%; display:flex; justify-content: center;">Create New Appointment</h2>
+		<div class="card-body">
+		<form id="makeAppointment" action="/createNewAppointment" style="margin-left:20%;margin-right:20%;" method="POST">
+			 <div class="form-group"> 
+				 <input type="text" name="simpleUser" placeholder="Give an existing ID">
+			 </div>
+		  <div class="form-group">
+		    <label for="exampleFormControlSelect1">Select a doctor</label>
+		    <select class="form-control" id="exampleFormControlSelect1" name="speciality">
+		      <option value="Cardiologist">Cardiologist</option>
+		      <option value="Pediatrician">Pediatrician</option>
+		      <option value="Dermatologist">Dermatologist</option>
+		      <option value="Psychiatrist">Psychiatrist</option>
+		      <option value="Neurologist">Neurologist</option>
+		    </select>
+		  </div>
+		    <div class="form-group">
+		    <label for="exampleFormControlSelect1">Select an available dates</label>
+		    <select class="form-control" id="exampleFormControlSelect1" name="dates">
+		      <option value="Monday 11:00-12:00">Monday 11:00-12:00</option>
+		      <option value="Friday 10:00-12:00">Friday 10:00-12:00</option>
+		      <option value="Sunday 09:00-11:00">Sunday 09:00-11:00</option>
+		      <option value="Thuesdaty 14:00-16:00">Thuesdaty 14:00-16:00</option>
+		      <option value="Wednesday 16:00-17:00">Wednesday 16:00-17:00</option>
+		    </select>
+		  </div>
+		  <div class="form-group">
+		    <label for="exampleFormControlTextarea1">Leave a comment (optional)</label>
+		    <textarea class="form-control" id="exampleFormControlTextarea1" name="comment_user" rows="3"></textarea>
+		  <input class="btn btn-success" type="submit" value="Create An Appointment">
+		  <button  class="btn btn-info"><a href="/AdminProfile">Back To Admin Profile</a></button>
+		  </div>
+		</form>
+</div>
+	</section>
+	</body>
+</html>

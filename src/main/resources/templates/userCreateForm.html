@@ -8,18 +8,20 @@
 	<scriptsrc="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 	<!--Fontawesome icons for footer-->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-	<link rel="stylesheet" href="/style/styles.css">
+	<link rel="stylesheet" href="/style.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />            
 	<title>IBolit</title>
 	<!--JQuery component-->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 </head>
-	<body style="background-color: GhostWhite;">
+	<body>
 		
-	<section>		
+	<section class="tableSection">		
+		<h2 style="margin-bottom:0%; display:flex; justify-content: center;">Add New User To The System</h2>
 		<div class="card-body">
-							<form  action="/createNewUser" method="post">
-								<label for="name" class="form-label">Name: </label>
+							<form  action="/createNewUser" method="post" style="margin-left:20%;margin-right:20%;">
+								
+								<label for="name" class="form-label my-3">Name: </label>
 				                <input type="text" class="form-control" id="name" name="name" placeholder="Insert name" required>
 				                
 				                <label for="surname" class="form-label my-3">Surname: </label>
@@ -43,9 +45,17 @@
 				                
 				                <label for="password" class="form-label my-3">Password: </label>
 				                <input type="password" class="form-control" id="password" name="password" placeholder="Insert password" required>	
-				                <label for= "role"  class="form-label my-3">Set the role of the member</label>	                
-				                <input type="text" class="form-control" id="role" name="role" placeholder="It can be ONLY admin/user">	
-				                <button type="submit" class="btn btn-success">Add to the system</button>
+				               <!-- <label for= "role"  class="form-label my-3">Set the role of the member</label>	     
+				                <input type="text" class="form-control" id="role" name="role" placeholder="It can be ONLY admin/user">-->	
+				                <!--test-->
+								<p>Set the role of the member:</p>
+									  <input type="radio" name="role" value="admin">
+									  <label for="role">admin</label><br>
+									  <input type="radio" name="role" value="user">
+									  <label for="role">user</label><br>  
+								<!--test-->
+				                <button type="submit" class="btn btn-success">Add To The System</button>
+				                <button  class="btn btn-info"><a href="/AdminProfile">Back To Admin Profile</a></button>
 				            </form>
 						</div>
 	</section>

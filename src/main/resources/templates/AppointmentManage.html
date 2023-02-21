@@ -16,37 +16,25 @@
 </head>
 	<body>
 	<section class="tableSection">
-		<button class="btn btn-success"><a href="/userCreateForm">Create A New Member</a></button>
+		<button class="btn btn-success"><a href="/LogicImplementationAppointment">Create A New Appointment</a></button>
 		 <button  class="btn btn-info"><a href="/AdminProfile">Back To Admin Profile</a></button>
 	<table class="table table-striped">
   <thead>
     <tr>
-	  <th scope="col">ID</th>
-      <th scope="col">Name</th>
-      <th scope="col">Surname</th>
-      <th scope="col">Country</th>
-      <th scope="col">City</th>
-      <th scope="col">Address</th>
-      <th scope="col">Email</th>
-      <th scope="col">Username</th>
-      <th scope="col">Role</th>
+      <th scope="col">Speciality</th>
+      <th scope="col">Dates</th>
+      <th scope="col">User Comment</th>
       <th scope="col">Options</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-		<tr th:each="simpleUser:  ${displayUsers}">
-			<td th:text="${simpleUser.idUser}"></td>
-			<td th:text="${simpleUser.name}"></td>
-			<td th:text="${simpleUser.surname}"></td>
-			<td th:text="${simpleUser.country}"></td>
-			<td th:text="${simpleUser.city}"></td>
-			<td th:text="${simpleUser.address}"></td>
-			<td th:text="${simpleUser.email}"></td>
-			<td th:text="${simpleUser.userName}"></td>
-			<td th:text="${simpleUser.role}"></td>
-			<td><a th:href="@{/UserDelete/} + ${simpleUser.idUser}" class="link-dark" style="color: black;"><i class='fa-solid fa-trash'></i></a>
-			<a th:href="@{/UserUpdateForm/} + ${simpleUser.idUser}" class="link-dark" style="color: black;"><i class='fa-solid fa-pen-to-square'></i></a>
+		<tr th:each="appointment: ${displayAppointments}">
+			<td th:text="${appointment.speciality}"></td>
+			<td th:text="${appointment.dates}"></td>
+			<td th:text="${appointment.comment_user}"></td>
+			<td><a th:href="@{/AppointmentDelete/} + ${appointment.id_appointment}" class="link-dark" style="color: black;"><i class='fa-solid fa-trash'></i></a>
+			<a th:href="@{/AppointmentUpdateForm/} + ${appointment.id_appointment}" class="link-dark" style="color: black;"><i class='fa-solid fa-pen-to-square'></i></a>
 </td>
 		</tr> 
     </tr>
